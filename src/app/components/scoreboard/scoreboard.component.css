@@ -1,0 +1,54 @@
+.scoreboard-container {
+  height: 100px;
+  width: 840px;
+}
+
+th {
+  font-size: small;
+}
+
+table {
+  border-spacing: 2px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cell {
+  text-align: center;
+  width: 50px;
+}
+
+.scorecard {
+  background-color: #2e69f1;
+  border-radius: 1em;
+  height: 50px;
+}
+
+.scorecard td:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+.scorecard td:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+.label {
+  text-align: center;
+}
+
+.pr-sm {
+  padding-right: 5px;
+}
+
+.knocked-pins {
+  font-size: 12px;
+}
+
+.roll-btn {
+  margin-top: 25px;
+  border: none;
+  background-color: greenyellow;
+  width: 100px;
+  height: 40px;
+  border-radius: 25rem;
+}

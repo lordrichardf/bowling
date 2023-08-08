@@ -1,0 +1,27 @@
+<table class="scoreboard-container">
+    <tr>
+        <td>&nbsp;</td>
+        <th *ngFor="let item of frameElements let i = index"> {{ i + 1 }} </th>
+        <th>total</th>
+    </tr>
+
+    <tr class="scorecard">
+        <td class="label">Player 1</td>
+        <td class="cell" *ngFor="let item of frameElements let i = index">
+            <span class="knocked-pins pr-sm" *ngIf="frameData[i]?.r1 !== 0" [innerHTML]="frameData[i]?.r1"></span>
+            <span class="knocked-pins" *ngIf="frameData[i]?.r2 !== 0" [innerHTML]="frameData[i]?.r2"></span>
+            <span *ngIf="frameData[i]?.r3 !== 0" [innerHTML]="frameData[i]?.r3"></span>
+
+            <br>
+            <ng-container *ngIf="frameData[i]?.r2 !== 0"> {{frameData[i]?.frameScore}} </ng-container>
+        </td>
+        <td class="cell"> {{this.gameOver ? this.totalScore : undefined}} </td>
+    </tr>
+    <tr class="scorecard">
+        <td class="label">Player 2</td>
+        <td class="cell" *ngFor="let item of frameElements"> </td>
+        <td class="cell"></td>
+    </tr>
+</table>
+
+<button class="roll-btn" (click)="roll()">Roll</button>
